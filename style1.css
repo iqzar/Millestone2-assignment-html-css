@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --background-color: #f9f9f9;
+    --form-bg-color: #fdcf5b;
+    --label-color: #4a4a4a;
+    --input-border-color: #ccc;
+    --button-bg-color: #007bff;
+    --button-hover-bg-color: #0056b3;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-container {
+    background-color: var(--form-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: padding var(--transition-speed);
+}
+
+label {
+    display: block;
+    color: var(--label-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: none; /* Prevent resizing of the textarea */
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--transition-speed);
+    width: 100%; /* Full width */
+    font-size: 1rem;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--button-hover-bg-color);
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-container {
+        padding: 18px;
+    }
+
+    input, textarea, button {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    .form-container {
+        padding: 16px;
+    }
+
+    input, textarea, button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.25rem; 
+    }
+
+    .form-container {
+        padding: 14px;
+    }
+
+    input, textarea, button {
+        font-size: 0.85rem;
+    }
+}

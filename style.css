@@ -197,8 +197,8 @@ nav ul li a:focus {
 }
 
 .links-section {
-    display: flex;
     flex: 2;
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -206,6 +206,7 @@ nav ul li a:focus {
 .nav-links,
 .legal-links,
 .social-links {
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
     margin: 10px 0;
@@ -245,16 +246,6 @@ h3 {
     font-size: 0.8rem;
 }
 
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    display: none;
-  }
-  
-  #check {
-    display: none;
-  }
 
 /* Accessibility Enhancements */
 
@@ -262,13 +253,8 @@ h3 {
 /* Responsive Styles */
 
 @media (min-width: 577px) and (max-width: 768px) {
-    .checkbtn {
-      display: block;
-      order: 1;
-      margin-right: 20px;
-    }
   
-    ul {
+    nav ul {
       position: fixed;
       top: 80px;
       right: -100%;
@@ -282,11 +268,11 @@ h3 {
       transition: all 0.3s;
     }
   
-    ul li {
+    nav ul li {
       margin: 20px 0;
     }
   
-    ul li a {
+    nav ul li a {
       font-size: 20px;
     }
   
@@ -320,6 +306,8 @@ h3 {
     }
 
     .links-section {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
